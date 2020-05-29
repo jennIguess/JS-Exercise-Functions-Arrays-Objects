@@ -119,10 +119,9 @@ function makePersonObject(id, name, email) {
  * passing { id: 1, name: 'Leia', email: 'leia@leia.com` } as the argument,
  * the returned value should look like `Hello, my name is Leia`.
 */
-function getName(
- let funcObj = { id: ${id}, name: ${name}, email: ${email},}){
+function getName(id: 1, name: "Leila", email: "leila@leila.com"){
   
-  return "Hello, my name is " + funcObj[1].name;
+  return "Hello, my name is " + getName.name;
 
  }
 
@@ -141,7 +140,7 @@ function getName(
  * passing in [ 'orange', 'grape', 'apple', 'banana', 'mango' ] as the argument,
  * the returned value should be: 2.
 */
-function appleIndex(let "fruits" = [${fruit}, ${fruit}, ${fruit}, ${fruit}, ${fruit}];) {
+function appleIndex(let "fruits" = [ 'orange', 'grape', 'apple', 'banana', 'mango' ]) {
   return fruits.indexOf("apple");
 }
 
@@ -160,9 +159,10 @@ function appleIndex(let "fruits" = [${fruit}, ${fruit}, ${fruit}, ${fruit}, ${fr
  * passing in [ 'orange', 'apple', 'banana', 'apples', 'apple', 'mango' ] as the argument,
  * the returned value should be: [ false, true, false, false, true, false ].
 */
-function isItAnApple(let "fruits" = [${fruit}, ${fruit}, ${fruit}, ${fruit}, ${fruit}];) {
-  if (fruits[${fruit}] = "apple"){return true;}
-  else {return false;}
+function isItAnApple(let fruits = [ 'orange', 'grape', 'apple', 'banana', 'mango' ]) {
+  let apple = (fruits.includes("apple")) 
+  return new Array(apple, apple, apple, apple, apple );
+  
 }
 
 
@@ -219,7 +219,7 @@ function get3rdCar(inventory) {
  * it will return `This is a Lincoln Navigator`.
 */
 function getCarInfoByIndex(inventory, index) {
-  return "This is a" + ${car_make} + " " + ${car_model};
+  return "This is a" + {car_make} + " " + {car_model};
 }
 /**
  * ### Challenge `getLastCarInfo`
