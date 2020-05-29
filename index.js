@@ -36,8 +36,8 @@ function addNumbers(num1, num2) {
  * the returned value should look like: 'Goodbye, Andy. Have a great day.'
  * 
 */
-function sayGoodbye(/* code here */) {
-  /* code here */
+function sayGoodbye(name) {
+  return "Goodbye, " + name + "." + " Have a great day.";
 }
 
 /**
@@ -54,10 +54,10 @@ function sayGoodbye(/* code here */) {
  * Hint 1: The formula for converting celsius to fahrenheit is t*9/5 + 32 where t is the temperature in celsius.
  * Hint 2: There is a very easy way to round numbers in JS. Do a google search to find out how. 
 */
-function temperatureCtoF(/* code here */) {
-  /* code here */
+function temperatureCtoF(celciusTemp) {
+ let farenheitTemp = celciusTemp * 9/5 + 32;
+ return Math.round(farenheitTemp);
 }
-
 /**
  * ### Challenge `temperatureInF`
  * 
@@ -75,11 +75,15 @@ function temperatureCtoF(/* code here */) {
  * 
  * Hint: You can call your `temperatureCtoF` function from inside `temperatureInF`.
 */
-function temperatureInF(/* code here */) {
-  /* code here */
+function temperatureInF(temperature, UnitOfTemp) {
+  if (UnitOfTemp = "F") {
+    return temperature;
+  }
+  else {
+    return temperatureCtoF();
+  }
+
 }
-
-
 /**
  * ### Challenge `makePersonObject`
  * 
@@ -96,8 +100,10 @@ function temperatureInF(/* code here */) {
  *   email: "leia@leia.com",
  * }
 */
-function makePersonObject(/* code here */) {
-  /* code here */
+function makePersonObject(id, name, email) {
+  return "id: ${id},"
+          "name: ${name},"
+          "email: ${email},"
 }
 
 /**
@@ -113,10 +119,12 @@ function makePersonObject(/* code here */) {
  * passing { id: 1, name: 'Leia', email: 'leia@leia.com` } as the argument,
  * the returned value should look like `Hello, my name is Leia`.
 */
-function getName(/* code here */) {
-  /* code here */
-}
+function getName(
+ let funcObj = { id: ${id}, name: ${name}, email: ${email},}){
+  
+  return "Hello, my name is " + funcObj[1].name;
 
+ }
 
 /**
  * ### Challenge `appleIndex`
@@ -133,8 +141,8 @@ function getName(/* code here */) {
  * passing in [ 'orange', 'grape', 'apple', 'banana', 'mango' ] as the argument,
  * the returned value should be: 2.
 */
-function appleIndex(/* code here */) {
-  /* code here */
+function appleIndex(let "fruits" = [${fruit}, ${fruit}, ${fruit}, ${fruit}, ${fruit}];) {
+  return fruits.indexOf("apple");
 }
 
 /**
@@ -152,8 +160,9 @@ function appleIndex(/* code here */) {
  * passing in [ 'orange', 'apple', 'banana', 'apples', 'apple', 'mango' ] as the argument,
  * the returned value should be: [ false, true, false, false, true, false ].
 */
-function isItAnApple(/* code here */) {
-  /* code here */
+function isItAnApple(let "fruits" = [${fruit}, ${fruit}, ${fruit}, ${fruit}, ${fruit}];) {
+  if (fruits[${fruit}] = "apple"){return true;}
+  else {return false;}
 }
 
 
@@ -210,9 +219,8 @@ function get3rdCar(inventory) {
  * it will return `This is a Lincoln Navigator`.
 */
 function getCarInfoByIndex(inventory, index) {
-  /* code here */
+  return "This is a" + ${car_make} + " " + ${car_model}
 }
-
 /**
  * ### Challenge `getLastCarInfo`
  * 
