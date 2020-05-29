@@ -80,7 +80,7 @@ function temperatureInF(temperature, UnitOfTemp) {
     return temperature;
   }
   else {
-    return temperatureCtoF();
+    return temperatureCtoF(temperature);
   }
 
 }
@@ -101,10 +101,12 @@ function temperatureInF(temperature, UnitOfTemp) {
  * }
 */
 function makePersonObject(id, name, email) {
-  return "id: ${id},"
-          "name: ${name},"
-          "email: ${email},"
+  let PersonObject = { id: id,
+          name: name,
+          email: email }
+          return PersonObject;
 }
+
 
 /**
  * ### Challenge `getName`
@@ -119,9 +121,10 @@ function makePersonObject(id, name, email) {
  * passing { id: 1, name: 'Leia', email: 'leia@leia.com` } as the argument,
  * the returned value should look like `Hello, my name is Leia`.
 */
-function getName(id: 1, name: "Leila", email: "leila@leila.com"){
+let NameObj = {id: 1, name: "Leila", email: "leila@leila.com"};
+function getName(NameObj){
   
-  return "Hello, my name is " + getName.name;
+  return "Hello, my name is " + NameObj.name;
 
  }
 
@@ -140,9 +143,14 @@ function getName(id: 1, name: "Leila", email: "leila@leila.com"){
  * passing in [ 'orange', 'grape', 'apple', 'banana', 'mango' ] as the argument,
  * the returned value should be: 2.
 */
-function appleIndex(let "fruits" = [ 'orange', 'grape', 'apple', 'banana', 'mango' ]) {
+
+let fruits = [ 'orange', 'grape', 'apple', 'banana', 'mango' ]
+
+function appleIndex(fruits) {
   return fruits.indexOf("apple");
 }
+
+
 
 /**
  * ### Challenge `isItAnApple`
@@ -159,11 +167,8 @@ function appleIndex(let "fruits" = [ 'orange', 'grape', 'apple', 'banana', 'mang
  * passing in [ 'orange', 'apple', 'banana', 'apples', 'apple', 'mango' ] as the argument,
  * the returned value should be: [ false, true, false, false, true, false ].
 */
-function isItAnApple(let fruits = [ 'orange', 'grape', 'apple', 'banana', 'mango' ]) {
-  let apple = (fruits.includes("apple")) 
-  return new Array(apple, apple, apple, apple, apple );
-  
-}
+
+
 
 
 
